@@ -1,0 +1,17 @@
+.boldy {
+    font-weight: bold;
+}
+
+#btnDemo3 {
+    width: 100%;
+}
+
+p {
+    text-indent: 30pt;
+  }
+
+  .center {
+    margin: auto;
+    width: 50%;
+    padding: 10px;
+  }
