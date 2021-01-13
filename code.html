@@ -41,6 +41,60 @@
         </div>
     </div>
 
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                 
+      <pre class ="line-numbers"><code class="language-javascript">
+        document.getElementById("btnWord").addEventListener("click", function(){
+    
+            let word1 = document.getElementById("input3").value;
+            let word = word1.toLowerCase()
+             
+            let newWord = word.split("").reverse().join("");
+        
+        
+            
+            if(word == newWord){
+        
+                document.getElementById("output4").innerHTML = `${word1} is a palindrome!`
+            
+            }else
+            {
+                document.getElementById("output4").innerHTML = `${word1} is not a palindrome.`
+            }
+            
+                document.getElementById("btnClear").addEventListener("click", function(){
+                
+                document.getElementById("input3").value = "";  
+                document.getElementById('output4').innerText = "";
+           
+            
+            });
+        
+        });
+
+  
+  
+
+
+  
+  
+          </code>
+        </pre>
+  
+          </div>
+      </div>
+  </div>
+
+
+
+
+
+
+
+
+
  <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>

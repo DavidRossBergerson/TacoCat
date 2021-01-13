@@ -1,8 +1,4 @@
-
-
-
-
-document.getElementById("btnWord").addEventListener("click", function(){
+    document.getElementById("btnWord").addEventListener("click", function(){
     
     let word1 = document.getElementById("input3").value;
     let word = word1.toLowerCase()
@@ -15,13 +11,13 @@ document.getElementById("btnWord").addEventListener("click", function(){
 
         document.getElementById("output4").innerHTML = `${word1} is a palindrome!`
     
-    }else{
-
+    }else
+    {
         document.getElementById("output4").innerHTML = `${word1} is not a palindrome.`
     }
     
-    document.getElementById("btnClear").addEventListener("click", function(){
-      
+        document.getElementById("btnClear").addEventListener("click", function(){
+        
         document.getElementById("input3").value = "";  
         document.getElementById('output4').innerText = "";
    
@@ -29,3 +25,6 @@ document.getElementById("btnWord").addEventListener("click", function(){
     });
 
 });
+
+
+
