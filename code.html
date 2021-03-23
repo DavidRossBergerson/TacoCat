@@ -21,10 +21,16 @@
             <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
                 
                 <li class="nav-item">
-                    <a class="nav-link" href="index.html">Index</a>
+                    <a class="nav-link" href="index.html">Home</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="solve.html">Solve</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" target = "_blank" href="https://github.com/DavidRossBergerson">Source</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" target="_blank" href="https://david-bergerson-portfolio.netlify.app">Portfolio</a>
                 </li>
             </ul>
         </div>
@@ -47,33 +53,44 @@
             <div class="col">
                  
       <pre class ="line-numbers"><code class="language-javascript">
-    document.getElementById("btnWord").addEventListener("click", function(){
-
-    let word1 = document.getElementById("input3").value;
-    let word = word1.toLowerCase()
+        document.getElementById("btnWord").addEventListener("click", function(){
+            let word2 = document.getElementById("input3").value;
         
-    let newWord = word.split("").reverse().join("");
-
-
+            let reg = /[\W_]/g
     
-    if(word == newWord){
-
-        document.getElementById("output4").innerHTML = `${word1} is a palindrome!`
+        let word3 = word2.toLowerCase().replace(reg, "")
+         
+        let word5 = word3.split('').length
     
-    }else
-    {
-        document.getElementById("output4").innerHTML = `${word1} is not a palindrome.`
-    }
-    
-        document.getElementById("btnClear").addEventListener("click", function(){
+        word4 = word3.split('').reverse().join('');
         
+    
+            if(word5 == 0)
+            {
+                 document.getElementById("output4").innerHTML = `Please fill out field.`
+            }
+    
+        else{if(word4 == word3){
+    
+            document.getElementById("output4").innerHTML = `${word2} is a palindrome!`
+        
+        }
+        else
+        {
+            document.getElementById("output4").innerHTML = `${word2} is not a palindrome.`
+        }
+    } 
+       
+        
+        
+    
+    });
+    document.getElementById("btnClear").addEventListener("click", function(){
+            
         document.getElementById("input3").value = "";  
         document.getElementById('output4').innerText = "";
     
-    
     });
-
-});
 </code>
         </pre>
   

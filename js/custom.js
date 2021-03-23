@@ -12,7 +12,7 @@
 
         if(word5 == 0)
         {
-            // document.getElementById("output4").innerHTML = `Please fill out field.`
+             document.getElementById("output4").innerHTML = `Please fill out field.`
         }
 
     else{if(word4 == word3){
@@ -36,4 +36,3 @@ document.getElementById("btnClear").addEventListener("click", function(){
     document.getElementById('output4').innerText = "";
 
 });
-
